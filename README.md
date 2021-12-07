@@ -76,6 +76,7 @@ The robot is said to have failed if drops the package anywhere but in the bin or
 ![node_graph](assets/Failure.png)
 
 ## Demonstration Video
+This is not final but the temporary demonstration of the project.More things are going to be added soon to make the communication between human and robot more natural,fast and spontaneous.
 
 [![alt text][1]][2]
 
