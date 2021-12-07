@@ -67,6 +67,9 @@ Run the Node for communication with the Robot
 
 ## Success and Failure
 
+The robot is said to be successful if it successfully completes the task given by human assistant. In this case it is picking and placing the packages in their respective bins. The image below is an example of successful task:
+
+[!node_graph](assets/success.png)
 
 
 
