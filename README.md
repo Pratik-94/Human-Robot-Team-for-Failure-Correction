@@ -60,4 +60,14 @@ Launching the Socioulator Robot
 
 - `roslaunch sociopulator robot.launch`
 
+Run the Node for communication with the Robot
+
+- `rosrun sociopulator robot.py`
+
+
+## Success and Failure
+
+
+
+
 
