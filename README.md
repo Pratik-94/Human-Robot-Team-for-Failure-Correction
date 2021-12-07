@@ -14,6 +14,8 @@ The main aim of this project is to demonstrate the power of human robot interact
 
 
 ## Installations
+ROS --Version
+ROS Melodic : Ubuntu 18.04
 Install ROS Controller
 
 - `sudo apt-get update` (optional)
