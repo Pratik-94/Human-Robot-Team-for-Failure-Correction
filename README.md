@@ -73,7 +73,7 @@ The robot is said to be successful if it successfully completes the task given b
 
 The robot is said to have failed if drops the package anywhere but in the bin or it fails to compute inverse kinematics for reaching a specific location(inverse kinematics failed) or it misbehavious in a way that human assistant does't understand. The image below shows an example of failure
 
-![node_graph](assets/failure.png)
+![node_graph](assets/Failure.png)
 
 
 
