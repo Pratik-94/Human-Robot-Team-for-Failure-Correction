@@ -30,7 +30,7 @@ Install Communication Libraries
 
 `pip install python-espeak`
 
-`pip install speech recognition`
+`pip install SpeechRecognition`
 
 `sudo apt-get install pyaudio`
 
