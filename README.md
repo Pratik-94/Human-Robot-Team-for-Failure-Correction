@@ -15,7 +15,7 @@ solving this task autonomously becomes quite challenging.No matter how much you 
 
 Due to all this, these problems are inevitable atleast for now. In all these scenarious, assistance of human to the robot is a necessity for completing all such super complex tasks.For assisting the robots,there is a need for making robot understand the language of the humans.(voice to text...). And for understanding the language or what the human is exactly trying say the communication should be efficient,lucid and interleaving.This makes us conclude with the research question 
 
-- `How to communicate with a robot more efficiently and incorporate failure actions?`
+`How to communicate with a robot more efficiently and incorporate failure actions?`
 
 
 ## Installations
