@@ -40,3 +40,6 @@ Install Communication Libraries
 
 - `sudo apt-get install pyaudio`
 
+## How to use the package
+
+
