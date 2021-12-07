@@ -77,5 +77,8 @@ The robot is said to have failed if drops the package anywhere but in the bin or
 
 ## Demonstration Video
 
+[![alt text][1]][2]
 
+[1]: https://github.com/varun7860/Sociopulator/assets/
+[2]: https://youtu.be/KC46ZoKCMt0
 
