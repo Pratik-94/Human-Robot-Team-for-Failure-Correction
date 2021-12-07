@@ -42,4 +42,6 @@ Install Communication Libraries
 
 ## How to use the package
 
+Building the package
+--------------------
 
