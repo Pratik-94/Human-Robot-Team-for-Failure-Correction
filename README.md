@@ -7,7 +7,7 @@
 ## About Sociopulator
 Sociopulator is a manipulator designed to perform manipulation tasks like "pick and place" successfully by interacting with humans. In this project the manipulator has the task of sorting the three packages (Green,Red,Blue) in their respective bin.(Green - Green Bin, Red - Red Bin, Blue - Blue Bin). The human can give the robot any of these 3 tasks through voice command. The robot asks for feedback after completing each task given by the human. whenever the robot is not able to perfom the given task, it asks for assistance from the human. Human provides different kinds of solutions to the robot to resolve the problem faced and robot tries to complete the tasks with the help of these solutions.
 
-The main aim of this project is to demonstrate the power of human robot interaction and human robot team.This project will how an efficient communication between human and robots can help tacling dynamic real life environment issues faced in today's world. These real life problems are mentioned in the research question section below. We have tried to demonstrate some of these real life issues with a help of simple environment in ROS and pick-place task.
+The main aim of this project is to demonstrate the power of human robot interaction and human robot team.This project will show how an efficient communication between human and robot can help tacling dynamic real life environment issues faced in today's world. These real life problems are mentioned in the research question section below. We have tried to demonstrate some of these real life issues with a help of simple environment in ROS and pick-place task.
 
 ## Research Question
 
