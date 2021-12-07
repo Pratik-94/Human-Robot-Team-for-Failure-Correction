@@ -25,7 +25,12 @@ Install Moveit
 Install Communication Libraries
 
 `sudo apt-get install espeak`
+
 `pip install pyttsx3`
+
 `pip install python-espeak`
+
 `pip install speech recognition`
+
 `sudo apt-get install pyaudio`
+
