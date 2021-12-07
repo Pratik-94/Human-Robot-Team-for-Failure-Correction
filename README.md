@@ -16,7 +16,11 @@ The main aim of this project is to demonstrate the power of human robot interact
 ## Installations
 Install ROS Controller
 
-`sudo apt-get install ros*controller*`
+- `sudo apt-get update` (optional)
+- `sudo apt-get upgrade` (optional)
+- `sudo apt-get dist-upgrade` (optional)
+- `rosdep update` (optional)
+- `sudo apt-get install ros*controller*`(optional)
 
 Install Moveit
 
