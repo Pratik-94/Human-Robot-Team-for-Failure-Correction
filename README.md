@@ -28,7 +28,7 @@ Install ROS Controller
 
 Install Moveit
 
-`sudo apt-get install moveit`
+- `sudo apt-get install moveit`
 
 Install Communication Libraries
 
@@ -46,12 +46,12 @@ Install Communication Libraries
 
 Building the package
 
-`catkin build sociopulator scarapulator_control`
+- `catkin build sociopulator scarapulator_control`
 
-`source ~/catkin_ws/devel/setup.bash`
+- `source ~/catkin_ws/devel/setup.bash`
 
 Launching the Socioulator Robot
 
-`roslaunch sociopulator robot.launch`
+- `roslaunch sociopulator robot.launch`
 
 
