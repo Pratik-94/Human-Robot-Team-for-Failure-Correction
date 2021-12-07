@@ -5,4 +5,4 @@
 ![node_graph](assets/workspace.png)
 
 ## About Sociopulator
-- Sociopulator is a manipulator designed to perform manipulation tasks like "pick and place" successfully by interacting with humans.
+Sociopulator is a manipulator designed to perform manipulation tasks like "pick and place" successfully by interacting with humans.
