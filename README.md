@@ -20,7 +20,7 @@ Install ROS Controller
 - `sudo apt-get upgrade` (optional)
 - `sudo apt-get dist-upgrade` (optional)
 - `rosdep update` (optional)
-- `sudo apt-get install ros*controller*`(optional)
+- `sudo apt-get install ros*controller*`
 
 Install Moveit
 
