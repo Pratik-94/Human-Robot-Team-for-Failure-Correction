@@ -43,5 +43,12 @@ Install Communication Libraries
 ## How to use the package
 
 Building the package
---------------------
+
+`catkin build sociopulator scarapulator_control`
+`source ~/catkin_ws/devel/setup.bash`
+
+Launching the Socioulator Robot
+
+`roslaunch sociopulator robot.launch`
+
 
