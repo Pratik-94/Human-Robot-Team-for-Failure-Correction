@@ -8,7 +8,7 @@
 Sociopulator is a manipulator designed to perform manipulation tasks like "pick and place" successfully by interacting with humans.
 
 ## Installations
-1.Install ROS Controller
+1. Install ROS Controller
 `sudo apt-get install ros*controller*`
-2.Install Moveit
+2. Install Moveit
 `sudo apt-get install moveit`
