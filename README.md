@@ -80,6 +80,6 @@ This is not final but the temporary demonstration of the project.More things are
 
 [![alt text][1]][2]
 
-[1]: https://github.com/varun7860/Sociopulator/assets/
+[1]: https://github.com/varun7860/Sociopulator/blob/main/assets/video.png
 [2]: https://youtu.be/KC46ZoKCMt0
 
