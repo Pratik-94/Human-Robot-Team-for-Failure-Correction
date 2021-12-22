@@ -1,0 +1,53 @@
+<launch> 
+  <!--Add the model path to gazebo -->
+  <env name="GAZEBO_MODEL_PATH" value="$(find sociopulator)/models"/>
+
+  <!--Launch movegroup node -->
+  <include file="$(find scarapulator_control)/launch/move_group.launch"/>
+
+  <!--Launch Rviz-->
+  <!--<include file="$(find scarapulator_control)/launch/moveit_rviz.launch"/>-->
+
+  <!--Launch planning context-->
+  <include file="$(find scarapulator_control)/launch/planning_context.launch">
+    <arg name="robot_description" value="true"/>
+  </include>
+
+  <!-- Spawn Urdf Model -->
+  <arg name="x" default="0.0"/>
+  <arg name="y" default="-0.6"/>
+  <arg name="z" default="0.0"/>
+
+  <!--<param name="robot_description" command="$(find xacro)/xacro inorder '$(find sociopulator)/urdf/robot.urdf'"/>-->
+  <param name="robot_description" textfile="$(find sociopulator)/urdf/robot.urdf"/>
+  <node name="urdf_spawner" pkg="gazebo_ros" type="spawn_model" respawn="false" output="screen" 
+        args="-urdf -model scara -param robot_description -model scara -x $(arg x) -y $(arg y) -z $(arg z)"/>
+
+  <!-- Controller for the Scara Robot -->
+  <rosparam file ="$(find sociopulator)/config/controller.yaml" command="load"/>
+  <node name="controller_spawner" pkg="controller_manager" type="spawner" args="scara_planner_controller"/>
+  <node name="controller_spawner_2" pkg="controller_manager" type="spawner" args="gripper_controller"/>
+
+  <!--Joint State Publisher Node -->
+  <node name="joint_state_publisher" pkg="joint_state_publisher" type="joint_state_publisher">
+     <param name="use_gui" value="False"/>
+  </node>
+
+
+  <!--Create Gazebo Varibles -->
+  <arg name="paused" default="false"/>
+  <arg name="use_sim_time" default="true"/>
+  <arg name="headless" default="false"/>
+  <arg name="gui" default="true"/>
+  <arg name="extra_gazebo_args" default="--verbose"/>
+
+  <!--Insert Gazebo Variables -->
+  <include file="$(find gazebo_ros)/launch/empty_world.launch">
+    <arg name="world_name" value="$(find sociopulator)/world/robot.world"/>
+    <arg name="paused" value="$(arg paused)"/>
+    <arg name="headless" value="$(arg headless)"/>
+    <arg name="use_sim_time" value="$(arg use_sim_time)"/>
+    <arg name="gui" value="$(arg gui)"/>
+    <arg name="extra_gazebo_args" value="$(arg extra_gazebo_args)"/> 
+  </include>
+</launch>

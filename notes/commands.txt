@@ -1,0 +1,8 @@
+#Respawn Green Package
+rosrun gazebo_ros spawn_model -file /home/varun/catkin_ws/src/sociopulator/models/package_green/model.sdf -sdf -model package_green -y 0.05 -x 0.15 -z 0.35
+
+#Respawn Red Package
+rosrun gazebo_ros spawn_model -file /home/varun/catkin_ws/src/sociopulator/models/package_red/model.sdf -sdf -model package_red -y 0.05 -x 0.0 -z 0.35
+
+#Respawn Blue Package
+rosrun gazebo_ros spawn_model -file /home/varun/catkin_ws/src/sociopulator/models/package_blue/model.sdf -sdf -model package_blue -y 0.05 -x -0.15 -z 0.35

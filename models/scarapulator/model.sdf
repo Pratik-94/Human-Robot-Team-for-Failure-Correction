@@ -1,0 +1,376 @@
+<sdf version='1.6'>
+  <model name='scara'>
+    <link name='base'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.004</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.004</iyy>
+          <iyz>0</iyz>
+          <izz>0.006</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_fixed_joint_lump__collision_base_collision'>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.1</size>
+          </box>
+        </geometry>
+      </collision>
+      <visual name='base_visual_visual'>
+        <pose frame=''>0 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.2 0.2 0.1</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Blue</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='base_joint' type='fixed'>
+      <child>base</child>
+      <parent>world</parent>
+    </joint>
+    <link name='link11'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.2 0 0.441667 0 -0 0</pose>
+        <mass>3</mass>
+        <inertia>
+          <ixx>0.0478747</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.045</ixz>
+          <iyy>0.261875</iyy>
+          <iyz>0</iyz>
+          <izz>0.0966</izz>
+        </inertia>
+      </inertial>
+      <collision name='link11_collision_collision'>
+        <pose frame=''>0 0 0.3 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.4</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='link11_fixed_joint_lump__link12_fixed_collision_collision_1'>
+        <pose frame=''>0.2 0 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.1 0.05</size>
+          </box>
+        </geometry>
+      </collision>
+      <collision name='link11_fixed_joint_lump__link13_collision_collision_2'>
+        <pose frame=''>0.4 0 0.525 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link11_visual_visual'>
+        <pose frame=''>0 0 0.3 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.4</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='link11_fixed_joint_lump__link12_fixed_visual_visual_1'>
+        <pose frame=''>0.2 0 0.5 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.1 0.05</size>
+          </box>
+        </geometry>
+      </visual>
+      <visual name='link11_fixed_joint_lump__link13_visual_visual_2'>
+        <pose frame=''>0.4 0 0.525 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.1</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='revolute_joint_1' type='revolute'>
+      <child>link11</child>
+      <parent>base</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.01</damping>
+          <friction>0</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link21'>
+      <pose frame=''>0.4 0 0.5 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.333333 0 0.05 0 -0 0</pose>
+        <mass>1.5</mass>
+        <inertia>
+          <ixx>0.002</ixx>
+          <ixy>0</ixy>
+          <ixz>-3.46945e-18</ixz>
+          <iyy>0.0278333</iyy>
+          <iyz>0</iyz>
+          <izz>0.0284333</izz>
+        </inertia>
+      </inertial>
+      <collision name='link21_fixed_1_collision_1_collision'>
+        <pose frame=''>0.2 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.1 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='link21_fixed_joint_lump__link22_fixed_2_collision_2_collision_1'>
+        <pose frame=''>0.4 0 0.05 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.05</radius>
+          </sphere>
+        </geometry>
+      </collision>
+      <visual name='link21_fixed_1_visual_1_visual'>
+        <pose frame=''>0.2 0 0.05 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.4 0.1 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Green</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='link21_fixed_joint_lump__link22_fixed_2_visual_2_visual_1'>
+        <pose frame=''>0.4 0 0.05 0 -0 0</pose>
+        <geometry>
+          <sphere>
+            <radius>0.05</radius>
+          </sphere>
+        </geometry>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='revolute_joint_2' type='revolute'>
+      <child>link21</child>
+      <parent>link11</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+          <effort>100</effort>
+          <velocity>0.4</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.2</damping>
+          <friction>0.001</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link3'>
+      <pose frame=''>0.8 0 0.5 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>0.025225</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.025225</iyy>
+          <iyz>0</iyz>
+          <izz>0.00045</izz>
+        </inertia>
+      </inertial>
+      <collision name='link3_collision_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.3</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link3_visual_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.3</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint_3' type='prismatic'>
+      <child>link3</child>
+      <parent>link21</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+          <effort>1000</effort>
+          <velocity>0.1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.4</damping>
+          <friction>15</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link4'>
+      <pose frame=''>0.8 0 0.35 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <mass>0.02</mass>
+        <inertia>
+          <ixx>0.025225</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.025225</iyy>
+          <iyz>0</iyz>
+          <izz>0.00045</izz>
+        </inertia>
+      </inertial>
+      <collision name='link4_collision_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </collision>
+      <visual name='link4_visual_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.02</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+      </visual>
+    </link>
+    <joint name='joint_4' type='revolute'>
+      <child>link4</child>
+      <parent>link3</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-0.2</lower>
+          <upper>0.2</upper>
+          <effort>1000</effort>
+          <velocity>0.1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.4</damping>
+          <friction>15</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <static>0</static>
+    <!--<plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/scara</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>1</legacyModeNS>
+    </plugin>-->
+  </model>
+</sdf>

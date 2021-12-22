@@ -1,0 +1,7 @@
+scara_planner_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints: [revolute_joint_1, revolute_joint_2]
+
+gripper_controller:
+    type: "position_controllers/JointTrajectoryController"
+    joints: [joint_3]
