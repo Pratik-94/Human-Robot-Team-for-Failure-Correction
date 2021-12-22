@@ -1,0 +1,359 @@
+<sdf version='1.4'>
+  <model name='scara'>
+    <link name='base_link'>
+      <pose frame=''>0 0 0 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 0.025 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>1</iyy>
+          <iyz>0</iyz>
+          <izz>1</izz>
+        </inertia>
+      </inertial>
+      <collision name='base_link_collision'>
+        <pose frame=''>0 0 0.025 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.12 0.12 0.05</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='base_link_visual'>
+        <pose frame=''>0 0 0.025 0 -0 0</pose>
+        <geometry>
+          <box>
+            <size>0.12 0.12 0.05</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='base2world' type='fixed'>
+      <child>base_link</child>
+      <parent>world</parent>
+    </joint>
+    <link name='revolute1'>
+      <pose frame=''>0 0 0.05 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.10625 0 0.225 0 -0 0</pose>
+        <mass>1</mass>
+        <inertia>
+          <ixx>1.03063</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.0185938</ixz>
+          <iyy>1.04191</iyy>
+          <iyz>0</iyz>
+          <izz>1.01129</izz>
+        </inertia>
+      </inertial>
+      <collision name='revolute1_collision'>
+        <pose frame=''>0 0 0.225 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.45</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='revolute1_fixed_joint_lump__link1_collision_1'>
+        <pose frame=''>0.2125 0 0.4 3.14159 1.57079 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.425</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='revolute1_visual'>
+        <pose frame=''>0 0 0.225 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.45</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='revolute1_fixed_joint_lump__link1_visual_1'>
+        <pose frame=''>0.2125 0 0.4 3.14159 1.57079 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.425</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint1' type='revolute'>
+      <child>revolute1</child>
+      <parent>base_link</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.2</damping>
+          <friction>0.1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='revolute2'>
+      <pose frame=''>0.425 0 0.5 0 -0 0</pose>
+      <inertial>
+        <pose frame=''>0.1725 0 0.033333 0 -0 0</pose>
+        <mass>1.5</mass>
+        <inertia>
+          <ixx>1.50083</ixx>
+          <ixy>0</ixy>
+          <ixz>-0.0043125</ixz>
+          <iyy>1.53059</iyy>
+          <iyz>0</iyz>
+          <izz>1.52976</izz>
+        </inertia>
+      </inertial>
+      <collision name='revolute2_collision'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='revolute2_fixed_joint_lump__link2_collision_1'>
+        <pose frame=''>0.1725 0 0.05 3.14159 1.57079 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.345</size>
+          </box>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <collision name='revolute2_fixed_joint_lump__prismatic3_collision_2'>
+        <pose frame=''>0.345 0 0.05 3.14 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.15</length>
+            <radius>0.07</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='revolute2_visual'>
+        <pose frame=''>0 0 0 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.2</length>
+            <radius>0.05</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Red</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='revolute2_fixed_joint_lump__link2_visual_1'>
+        <pose frame=''>0.1725 0 0.05 3.14159 1.57079 3.14159</pose>
+        <geometry>
+          <box>
+            <size>0.1 0.1 0.345</size>
+          </box>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <visual name='revolute2_fixed_joint_lump__prismatic3_visual_2'>
+        <pose frame=''>0.345 0 0.05 3.14 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.15</length>
+            <radius>0.07</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Green</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <velocity_decay/>
+      <velocity_decay/>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint2' type='revolute'>
+      <child>revolute2</child>
+      <parent>revolute1</parent>
+      <axis>
+        <xyz>0 0 1</xyz>
+        <limit>
+          <lower>-1e+16</lower>
+          <upper>1e+16</upper>
+        </limit>
+        <dynamics>
+          <damping>0.2</damping>
+          <friction>0.1</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <link name='link3'>
+      <pose frame=''>0.77 -0.000175 0.44 3.14 -0 0</pose>
+      <inertial>
+        <pose frame=''>0 0 -0.25 0 -0 0</pose>
+        <mass>0.2</mass>
+        <inertia>
+          <ixx>0.2</ixx>
+          <ixy>0</ixy>
+          <ixz>0</ixz>
+          <iyy>0.2</iyy>
+          <iyz>0</iyz>
+          <izz>0.2</izz>
+        </inertia>
+      </inertial>
+      <collision name='link3_collision'>
+        <pose frame=''>0 0 -0.25 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.5</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <surface>
+          <contact>
+            <ode/>
+          </contact>
+          <friction>
+            <ode/>
+          </friction>
+        </surface>
+      </collision>
+      <visual name='link3_visual'>
+        <pose frame=''>0 0 -0.25 0 -0 0</pose>
+        <geometry>
+          <cylinder>
+            <length>0.5</length>
+            <radius>0.03</radius>
+          </cylinder>
+        </geometry>
+        <material>
+          <script>
+            <name>Gazebo/Black</name>
+            <uri>file://media/materials/scripts/gazebo.material</uri>
+          </script>
+        </material>
+      </visual>
+      <gravity>1</gravity>
+      <velocity_decay/>
+    </link>
+    <joint name='joint3' type='prismatic'>
+      <child>link3</child>
+      <parent>revolute2</parent>
+      <axis>
+        <xyz>0 -0.001593 -0.999999</xyz>
+        <limit>
+          <lower>-1e-05</lower>
+          <upper>0.3</upper>
+          <effort>1000</effort>
+          <velocity>0.1</velocity>
+        </limit>
+        <dynamics>
+          <damping>0.4</damping>
+          <friction>5</friction>
+          <spring_reference>0</spring_reference>
+          <spring_stiffness>0</spring_stiffness>
+        </dynamics>
+        <use_parent_model_frame>1</use_parent_model_frame>
+      </axis>
+    </joint>
+    <static>0</static>
+    <!--<plugin name='gazebo_ros_control' filename='libgazebo_ros_control.so'>
+      <robotNamespace>/scara</robotNamespace>
+      <robotSimType>gazebo_ros_control/DefaultRobotHWSim</robotSimType>
+      <legacyModeNS>1</legacyModeNS>
+    </plugin>-->
+  </model>
+</sdf>

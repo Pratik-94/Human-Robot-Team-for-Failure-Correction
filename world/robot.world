@@ -1,0 +1,123 @@
+<?xml version="1.0"?>
+
+<sdf version="1.5">
+   <world name="default">
+     <!-- A gazebo links attacher -->
+     <plugin name="ros_link_attacher_plugin" filename="libgazebo_ros_link_attacher.so"/>
+
+    <gravity>0 0 -9.8</gravity>
+    <physics default="0" name="default_physics" type="ode">
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+      <real_time_update_rate>1000</real_time_update_rate>
+    </physics>
+
+     <!-- Add the ground plane -->
+     <!--<include>
+        <uri>model://ground_plane</uri>
+     </include> -->
+
+     <model name="aws_robomaker_warehouse_GroundB_01_001">
+        <include>
+            <uri>model://aws_robomaker_warehouse_GroundB_01</uri>
+        </include>
+        <pose frame="">0.0 7.5 -0.140 0 0</pose>
+	</model>
+       
+    <model name="aws_robomaker_warehouse_Lamp_01_005">
+        <include>
+            <uri>model://aws_robomaker_warehouse_Lamp_01</uri>
+        </include>
+        <pose frame="">0 0 -4 0 0 0</pose>
+	</model>
+    
+
+     <!-- Add the light Source -->
+     <include>
+        <uri>model://sun</uri>
+     </include>
+
+     <!-- Add the Table -->
+     <include>
+        <uri>model://table</uri>
+     </include>
+
+     <!-- Add the Bins -->
+     <model name="sorting_bin_red_">
+       <include>
+        <uri>model://sorting_bin_red_</uri>
+        <pose>0.75 -0.65 0.0 0 0 0</pose>
+        <static>true</static>
+       </include>
+     </model>
+
+     <model name="sorting_bin_green">
+       <include>
+        <uri>model://sorting_bin_green_</uri>
+        <pose>-0.75 -0.65 0.0 0 0 0</pose>
+        <static>true</static>
+       </include>
+     </model>
+
+     <model name="sorting_bin_blue_">
+       <include>
+        <uri>model://sorting_bin_blue_</uri>
+        <pose>0.0 -1.45 0.0 0 0 1.57</pose>
+        <static>true</static>
+       </include>
+     </model>
+
+     <!-- Add the logical Camera -->
+     <!--<model name="logical_camera">
+       <include>
+        <uri>model://logical_camera2</uri>
+        <pose>0.15 0.05 1.2 0.0 1.57 -1.57</pose>
+        <static>true</static>
+       </include>
+     </model>-->
+
+     <!-- Spawn the boxes -->
+     <model name="red_package">
+       <include>
+           <uri>model://package_red</uri>
+           <pose>0.0 0.05 0.35 0.0 0.0 0.0</pose>
+           <static>false</static>
+       </include>
+     </model>
+
+     <model name="green_package">
+       <include>
+           <uri>model://package_green</uri>
+           <pose>0.15 0.05 0.35 0.0 0.0 0.0</pose>
+           <static>false</static>
+       </include>
+     </model>
+
+     <model name="blue_package">
+       <include>
+           <uri>model://package_blue</uri>
+           <pose>-0.15 0.05 0.35 0.0 0.0 0.0</pose>
+           <static>false</static>
+       </include>
+     </model>
+
+
+     <!-- Add the manipulator -->
+     <!--<include>
+        <uri>model://scarapulator</uri>
+        <pose>0.0 -0.6 0.0 0.0 0.0 0.0</pose>
+     </include>-->
+
+     <!-- Add RGB Camera -->
+     <model name="RGB_camera">
+      <include>
+         <uri>model://Kinect</uri>
+         <pose>-0.0 0.0 1.2 0.0 1.57 1.57</pose>
+         <view_controller>orbit</view_controller>
+         <projection_type>perspective</projection_type>
+         <static>true</static>
+      </include>
+     </model>
+
+   </world>
+</sdf>
