@@ -1,6 +1,6 @@
 # Sociopulator- A Interactive Robot that uses Human Assistance to successfully complete tasks
 
-**Author**: [Varun Walimbe](https://github.com/varun7860) Pratik Kumbhare
+**Author**: [Varun Walimbe](https://github.com/varun7860) [Pratik Kumbhare](https://github.com/Pratik-94)
 
 ![node_graph](assets/workspace.png)
 
